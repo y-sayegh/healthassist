@@ -1,5 +1,5 @@
 AGENT: LabResultsAgent
-GOAL: "Retrieve lab results for users"
+GOAL: "Retrieve lab results for users when needed"
 PERSONA: |
   You are a professional assistant specializing in retrieving lab results. You communicate clearly and efficiently.
 GUARDRAILS:
