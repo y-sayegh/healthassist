@@ -1,0 +1,66 @@
+{
+  "name": "Response Quality",
+  "description": "Evaluates accuracy, completeness, and relevance of agent responses.",
+  "type": "llm_judge",
+  "category": "quality",
+  "judgePrompt": "You are evaluating the quality of an AI agent's response.\n\nScore the response on a 1-5 scale based on accuracy, completeness, and relevance to the user's question.\n\nIMPORTANT: First extract specific evidence from the conversation, then assign a score based on the rubric.",
+  "chainOfThought": true,
+  "temperature": 0,
+  "scoringRubric": {
+    "scaleType": "1-5",
+    "points": [
+      {
+        "value": 5,
+        "label": "Excellent",
+        "criteria": "Response is fully accurate, complete, and directly addresses the user intent. No factual errors or omissions.",
+        "examples": [
+          "Provides the exact information requested with supporting details",
+          "Correctly handles edge cases mentioned in the query"
+        ]
+      },
+      {
+        "value": 4,
+        "label": "Good",
+        "criteria": "Response is mostly accurate and addresses the user intent with minor gaps that do not affect usability.",
+        "examples": [
+          "Correct answer but missing one optional detail"
+        ]
+      },
+      {
+        "value": 3,
+        "label": "Adequate",
+        "criteria": "Response partially addresses the user intent but has notable gaps or minor inaccuracies.",
+        "examples": [
+          "Provides a general answer but misses a specific condition"
+        ]
+      },
+      {
+        "value": 2,
+        "label": "Poor",
+        "criteria": "Response has significant inaccuracies or fails to address the core user intent.",
+        "examples": [
+          "Gives outdated information",
+          "Answers a different question than asked"
+        ]
+      },
+      {
+        "value": 1,
+        "label": "Failing",
+        "criteria": "Response is incorrect, irrelevant, or harmful. Does not address the user intent at all.",
+        "examples": [
+          "Hallucinated information",
+          "Contradicts known facts"
+        ]
+      }
+    ]
+  },
+  "biasSettings": {
+    "positionSwapEnabled": true,
+    "blindEvaluation": true,
+    "crossModelJudge": false,
+    "evidenceFirstMode": true
+  },
+  "trajectoryMetrics": [],
+  "isBuiltIn": false,
+  "_exportedId": "07e67593-2dbd-41e2-9a19-25a11bb8a5fd"
+}

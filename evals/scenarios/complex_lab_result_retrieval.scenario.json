@@ -1,0 +1,27 @@
+{
+  "name": "Complex Lab Result Retrieval",
+  "description": "Alex Green requests lab results which involves multiple verifications and possible redirections.",
+  "category": "multi_turn",
+  "difficulty": "hard",
+  "entryAgent": "LabResultsAgent",
+  "maxTurns": 10,
+  "tags": [
+    "lab results",
+    "identity verification",
+    "verbose",
+    "Alex Green"
+  ],
+  "agentPath": [
+    "LabResultsAgent",
+    "FrontDesk",
+    "LabResultsAgent"
+  ],
+  "expectedMilestones": [
+    "Verify identity",
+    "Acknowledge data privacy",
+    "Retrieve recent results",
+    "Provide detailed explanations"
+  ],
+  "version": 1,
+  "_exportedId": "0d24a878-c7aa-49a5-a2ef-a0dbfefc9938"
+}

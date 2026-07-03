@@ -1,0 +1,22 @@
+{
+  "slug": "symptoms",
+  "name": "Symptoms Index",
+  "description": "knowledge base for symptoms and illness",
+  "embeddingModel": "bge-m3",
+  "embeddingDimensions": 1024,
+  "tokenChunkStrategy": null,
+  "vectorStore": {
+    "provider": "opensearch",
+    "collectionName": "search-vectors-v1"
+  },
+  "searchDefaults": {
+    "topK": 10,
+    "similarityThreshold": 0.2,
+    "includeMetadata": true,
+    "includeContent": true
+  },
+  "llmConfig": {
+    "enabled": true
+  },
+  "_exportedId": "13387a38-500b-4c51-8db3-71334fb7d3f1"
+}

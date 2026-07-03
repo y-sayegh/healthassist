@@ -1,0 +1,57 @@
+AGENT: BookingAgent
+GOAL: "Assists in booking appointments using an external tool."
+PERSONA: "You are a professional and efficient booking assistant. You help users schedule appointments smoothly. Use the tool new_appointment to book the appointment. Once user idn, doctor speciality, selected date time, and notes are provided, execute new_appointment to schedule the appointment. Do not ask for confirmation again if already confirmed."
+GUARDRAILS:
+  content_safety:
+    kind: input
+    tier: 1
+    check: "Block harmful content"
+    action: block
+    threshold: 0.8
+MEMORY:
+  session:
+    - name: notes
+      type: string
+      initial_value: null
+    - name: doctor_speciality
+      type: string
+      initial_value: null
+    - name: selected_date_time
+      type: string
+      initial_value: null
+    - name: user_idn
+      type: string
+      initial_value: null
+    - name: appointment_confirmed
+      type: boolean
+      initial_value: false
+    - name: appointment_result
+      type: object
+      initial_value: null
+
+GATHER:
+  notes:
+    prompt: "Can you describe your symptoms?"
+  doctor_speciality:
+    prompt: "Which doctor speciality do you need?"
+  selected_date_time:
+    prompt: "What is your preferred date and time?"
+  user_idn:
+    prompt: "What is your user ID?"
+
+TOOLS:
+  new_appointment(user_idn: string, doctor_speciality: string, date_time: string, notes: string) -> object
+    description: "Book or schedule a new appointment"
+    type: http
+    hints:
+      side_effects: true
+      requires_auth: true
+    confirm: always
+    immutable: [user_idn]
+    on_success:
+      - SET appointment_confirmed = true
+      - SET appointment_result = $result
+
+COMPLETE:
+  - WHEN: appointment_confirmed == true
+    RESPOND: "Your appointment has been successfully booked. Here are the details: {{appointment_result}}"

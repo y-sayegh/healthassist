@@ -1,0 +1,21 @@
+{
+  "name": "GPT-4o",
+  "modelId": "gpt-4o",
+  "provider": "openai",
+  "temperature": 1,
+  "maxTokens": 16384,
+  "topP": 1,
+  "frequencyPenalty": 0,
+  "presencePenalty": 0,
+  "inputCostPer1k": null,
+  "outputCostPer1k": null,
+  "supportsTools": true,
+  "supportsVision": true,
+  "supportsStreaming": true,
+  "useResponsesApi": null,
+  "useStreaming": null,
+  "contextWindow": 128000,
+  "tier": "balanced",
+  "isDefault": true,
+  "priority": 0
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Impatient Appointment Seeker",
+  "description": "AI-generated persona",
+  "communicationStyle": "terse",
+  "domainKnowledge": "intermediate",
+  "behaviorTraits": [
+    "impatient",
+    "goal-oriented"
+  ],
+  "goals": "Book an appointment as quickly as possible.",
+  "constraints": "Easily frustrated by delays or complicated instructions.",
+  "source": "ai-generated",
+  "isAdversarial": false,
+  "isBuiltIn": false,
+  "_exportedId": "918b3078-cded-4950-b19c-d3bdcc9597cc"
+}

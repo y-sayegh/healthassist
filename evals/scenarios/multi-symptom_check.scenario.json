@@ -1,0 +1,24 @@
+{
+  "name": "Multi-Symptom Check",
+  "description": "User presents multiple symptoms and needs an accurate check with potential redirection.",
+  "category": "multi_turn",
+  "difficulty": "medium",
+  "entryAgent": "SymptomsCheckAgent",
+  "initialMessage": "I'm experiencing a fever and sore throat for the last two days.",
+  "expectedOutcome": "User is provided with relevant advice or directed to book a medical appointment.",
+  "maxTurns": 7,
+  "tags": [
+    "health",
+    "symptoms"
+  ],
+  "agentPath": [
+    "SymptomsCheckAgent"
+  ],
+  "expectedMilestones": [
+    "Symptoms recorded",
+    "Severity evaluated",
+    "Advice provided"
+  ],
+  "version": 1,
+  "_exportedId": "6ff4e517-98a8-4aa2-a0f2-95ca69ac7882"
+}

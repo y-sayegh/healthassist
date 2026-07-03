@@ -1,0 +1,16 @@
+{
+  "name": "John Smith",
+  "description": "Auto-generated for Quick Eval",
+  "communicationStyle": "terse",
+  "domainKnowledge": "beginner",
+  "behaviorTraits": [
+    "impatient",
+    "easily frustrated"
+  ],
+  "goals": "",
+  "constraints": "",
+  "source": "ai-generated",
+  "isAdversarial": false,
+  "isBuiltIn": false,
+  "_exportedId": "8ba82198-239c-4f39-a521-012fef6f1b7a"
+}

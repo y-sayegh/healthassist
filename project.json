@@ -1,0 +1,96 @@
+{
+  "format_version": "2.0",
+  "name": "HealthAssist",
+  "slug": "healthassist",
+  "description": "Health Assist application (symptoms check, appointments)",
+  "abl_version": "1.0",
+  "exported_at": "2026-07-03T06:39:07.366Z",
+  "exported_by": "019eb003-88c5-7c36-9096-be7579cccbfa",
+  "entry_agent": "AuthenticationAgent",
+  "dsl_format": "legacy",
+  "layers_included": [
+    "core",
+    "connections",
+    "prompts",
+    "guardrails",
+    "workflows",
+    "evals",
+    "search",
+    "channels",
+    "vocabulary"
+  ],
+  "agents": {
+    "BookingAgent": {
+      "path": "agents/bookingagent.agent.abl",
+      "owner": null,
+      "ownerTeam": null,
+      "description": "Assists in booking appointments using an external tool.",
+      "version": null
+    },
+    "AuthenticationAgent": {
+      "path": "agents/authenticationagent.agent.abl",
+      "owner": null,
+      "ownerTeam": null,
+      "description": "Collect and validate user name and date of birth using a tool",
+      "version": null
+    },
+    "LabResultsAgent": {
+      "path": "agents/labresultsagent.agent.abl",
+      "owner": null,
+      "ownerTeam": null,
+      "description": "Retrieve lab results for users",
+      "version": null
+    },
+    "FrontDesk": {
+      "path": "agents/frontdesk.agent.abl",
+      "owner": null,
+      "ownerTeam": null,
+      "description": null,
+      "version": null
+    },
+    "SymptomsCheckAgent": {
+      "path": "agents/symptomscheckagent.agent.abl",
+      "owner": null,
+      "ownerTeam": null,
+      "description": "Conduct an efficient and accurate symptoms check online.",
+      "version": null
+    }
+  },
+  "tools": {
+    "authenticate_patient": {
+      "path": "tools/authenticate_patient.tools.abl",
+      "owner": null
+    },
+    "search_kb_symptoms": {
+      "path": "tools/search_kb_symptoms.tools.abl",
+      "owner": null
+    },
+    "new_appointment": {
+      "path": "tools/new_appointment.tools.abl",
+      "owner": null
+    }
+  },
+  "behavior_profiles": {},
+  "metadata": {
+    "entity_counts": {
+      "agents": 5,
+      "tools": 3,
+      "behavior_profiles": 0,
+      "core": 10,
+      "connections": 0,
+      "prompts": 0,
+      "guardrails": 0,
+      "workflows": 0,
+      "evals": 18,
+      "search": 2,
+      "channels": 0,
+      "vocabulary": 0
+    },
+    "required_env_vars": [],
+    "required_config_vars": [
+      "SUPABASE"
+    ],
+    "required_connectors": [],
+    "required_mcp_servers": []
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Task Efficiency",
+  "description": "Evaluates how efficiently the agent resolves user requests (turn count, tool usage).",
+  "type": "llm_judge",
+  "category": "efficiency",
+  "judgePrompt": "You are evaluating the efficiency of an AI agent's task resolution.\n\nConsider: number of turns to resolution, unnecessary tool calls, redundant clarification questions, and whether the agent took the most direct path to solve the user's problem.\n\nScore 1-5 based on the rubric. Evidence must reference specific turn counts and tool call patterns.",
+  "chainOfThought": true,
+  "temperature": 0,
+  "scoringRubric": {
+    "scaleType": "1-5",
+    "points": [
+      {
+        "value": 5,
+        "label": "Excellent",
+        "criteria": "Resolves the request in minimal turns with no unnecessary tool calls or redundant questions.",
+        "examples": []
+      },
+      {
+        "value": 4,
+        "label": "Good",
+        "criteria": "Resolves efficiently with at most one unnecessary step or clarification.",
+        "examples": []
+      },
+      {
+        "value": 3,
+        "label": "Adequate",
+        "criteria": "Resolves the request but with noticeable inefficiency (extra tool calls, repeated questions).",
+        "examples": []
+      },
+      {
+        "value": 2,
+        "label": "Poor",
+        "criteria": "Significant inefficiency — multiple unnecessary steps, loops, or failed tool calls before resolution.",
+        "examples": []
+      },
+      {
+        "value": 1,
+        "label": "Failing",
+        "criteria": "Unable to resolve the request, enters infinite loops, or makes excessive failed tool calls.",
+        "examples": []
+      }
+    ]
+  },
+  "biasSettings": {
+    "positionSwapEnabled": true,
+    "blindEvaluation": true,
+    "crossModelJudge": false,
+    "evidenceFirstMode": true
+  },
+  "trajectoryMetrics": [],
+  "isBuiltIn": false,
+  "_exportedId": "8345ab90-3cd7-4286-8426-b076e22c7953"
+}

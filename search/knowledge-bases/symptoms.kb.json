@@ -1,0 +1,9 @@
+{
+  "name": "Symptoms",
+  "description": "knowledge base for symptoms and illness",
+  "status": "active",
+  "isPublic": false,
+  "metadata": null,
+  "_indexSlug": "symptoms",
+  "_exportedId": "30e22b76-97f8-4405-8700-a087489a2f42"
+}

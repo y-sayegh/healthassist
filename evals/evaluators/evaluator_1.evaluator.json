@@ -1,0 +1,52 @@
+{
+  "name": "Evaluator 1",
+  "type": "llm_judge",
+  "category": "quality",
+  "judgeModel": "gpt-4o",
+  "chainOfThought": true,
+  "temperature": 0,
+  "scoringRubric": {
+    "scaleType": "1-5",
+    "points": [
+      {
+        "value": 1,
+        "label": "Poor",
+        "criteria": "Response is incorrect, irrelevant, or harmful.",
+        "examples": []
+      },
+      {
+        "value": 2,
+        "label": "Below Average",
+        "criteria": "Significant issues that affect usability.",
+        "examples": []
+      },
+      {
+        "value": 3,
+        "label": "Average",
+        "criteria": "Partially addresses the request with notable gaps.",
+        "examples": []
+      },
+      {
+        "value": 4,
+        "label": "Good",
+        "criteria": "Mostly correct with minor issues.",
+        "examples": []
+      },
+      {
+        "value": 5,
+        "label": "Excellent",
+        "criteria": "Fully correct, complete, and well-structured.",
+        "examples": []
+      }
+    ]
+  },
+  "biasSettings": {
+    "positionSwapEnabled": true,
+    "blindEvaluation": true,
+    "crossModelJudge": false,
+    "evidenceFirstMode": true
+  },
+  "trajectoryMetrics": [],
+  "isBuiltIn": false,
+  "_exportedId": "71d12cf9-3d6a-4222-b437-6969b04bfc25"
+}

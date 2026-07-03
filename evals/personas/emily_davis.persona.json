@@ -1,0 +1,16 @@
+{
+  "name": "Emily Davis",
+  "description": "Auto-generated for Quick Eval",
+  "communicationStyle": "formal",
+  "domainKnowledge": "intermediate",
+  "behaviorTraits": [
+    "patient",
+    "cooperative"
+  ],
+  "goals": "",
+  "constraints": "",
+  "source": "ai-generated",
+  "isAdversarial": false,
+  "isBuiltIn": false,
+  "_exportedId": "ed45bfe9-ee65-4877-9d79-4c472861d933"
+}

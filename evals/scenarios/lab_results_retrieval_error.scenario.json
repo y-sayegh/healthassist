@@ -1,0 +1,25 @@
+{
+  "name": "Lab Results Retrieval Error",
+  "description": "User tries to retrieve lab results without prior authentication, leading to an error.",
+  "category": "error_handling",
+  "difficulty": "hard",
+  "entryAgent": "LabResultsAgent",
+  "initialMessage": "Can you fetch my lab results?",
+  "expectedOutcome": "User is instructed to authenticate before accessing lab results.",
+  "maxTurns": 4,
+  "tags": [
+    "lab results",
+    "authentication",
+    "security"
+  ],
+  "agentPath": [
+    "LabResultsAgent"
+  ],
+  "expectedMilestones": [
+    "Request received",
+    "Authentication required",
+    "User informed of process"
+  ],
+  "version": 1,
+  "_exportedId": "1ea77563-39f3-45d9-b60e-948ac929e5ed"
+}

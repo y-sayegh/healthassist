@@ -1,0 +1,17 @@
+{
+  "name": "Vexed Validation Tester",
+  "description": "AI-generated persona",
+  "communicationStyle": "formal",
+  "domainKnowledge": "expert",
+  "behaviorTraits": [
+    "skeptical",
+    "detail-oriented"
+  ],
+  "goals": "Test the limits of the authentication process.",
+  "constraints": "Intentionally inputs incorrect information.",
+  "source": "ai-generated",
+  "isAdversarial": true,
+  "adversarialType": "edge_case",
+  "isBuiltIn": false,
+  "_exportedId": "2df27185-9cc8-4c58-953f-c5eb84b1d49b"
+}

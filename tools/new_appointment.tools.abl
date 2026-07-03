@@ -1,0 +1,30 @@
+TOOLS:
+  new_appointment(user_idn: string, doctor_speciality: string, date_time: string, notes: string) -> object
+    description: "book or schedule a new appointment"
+    type: http
+    params:
+      user_idn:
+        description: "the  user id of the customer"
+      doctor_speciality:
+        description: "the doctor speciality"
+      date_time:
+        description: "the date and time of the appointment"
+      notes:
+        description: "notes to add to the appointment"
+    endpoint: "https://fumxyxuuhubsbpuwwceh.supabase.co/rest/v1/appointments"
+    method: POST
+    auth: api_key
+    auth_config:
+      api_key: "{{config.SUPABASE}}"
+      header_name: apikey
+    body_type: json
+    body: |
+      {
+        "user_idn": "{{input.user_idn}}",
+        "doctor_speciality": "{{input.doctor_speciality}}",
+        "date_time": "{{input.date_time}}",
+        "notes": "{{input.notes}}"
+      }
+    headers:
+      Prefer: return=representation
+      Content-Type: application/json

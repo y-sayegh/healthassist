@@ -1,0 +1,7 @@
+[
+  {
+    "key": "SUPABASE",
+    "isSecret": true,
+    "description": "supabase key"
+  }
+]

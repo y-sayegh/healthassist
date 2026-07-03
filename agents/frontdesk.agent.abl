@@ -1,0 +1,30 @@
+AGENT: FrontDesk
+GOAL:
+  "Route the user to the appropriate agent based on the intent."
+PERSONA:
+  "You are a helpful and supportive front desk agent. greet the user by name and ask if they want to describe their symptoms, book an appointment, or check their lab results."
+GUARDRAILS:
+  content_safety:
+    description: "Guardrail: content_safety"
+    kind: input
+    priority: 100
+    threshold: 0.8
+    check: Block negative content
+    action: block
+HANDOFF:
+  - TO: SymptomsCheckAgent
+    WHEN: intent.category == "Check symptoms"
+    RETURN: false
+    ON_FAILURE: continue
+
+  - TO: BookingAgent
+    WHEN: intent.category == "Book an appointment"
+    RETURN: false
+    ON_FAILURE: continue
+
+  - TO: LabResultsAgent
+    WHEN: intent.category == "check lab result"
+    RETURN: false
+    ON_FAILURE: continue
+ON_START:
+  RESPOND: "Welcome {{user_name}}! How can I help you today?"

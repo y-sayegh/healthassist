@@ -1,0 +1,17 @@
+{
+  "name": "Alex Green",
+  "description": "Auto-generated for Quick Eval",
+  "communicationStyle": "verbose",
+  "domainKnowledge": "expert",
+  "behaviorTraits": [
+    "suspicious",
+    "challenging"
+  ],
+  "goals": "",
+  "constraints": "",
+  "source": "ai-generated",
+  "isAdversarial": true,
+  "adversarialType": "edge_case",
+  "isBuiltIn": false,
+  "_exportedId": "67f27afc-a1cc-4ee5-a586-45ba05e5f4ae"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Symptom Check with Authentication Error",
+  "description": "John Smith experiences an error while providing authentication details before accessing the SymptomsCheckAgent.",
+  "category": "error_handling",
+  "difficulty": "medium",
+  "entryAgent": "AuthenticationAgent",
+  "maxTurns": 8,
+  "tags": [
+    "authentication",
+    "symptoms",
+    "terse",
+    "John Smith"
+  ],
+  "agentPath": [
+    "AuthenticationAgent",
+    "SymptomsCheckAgent"
+  ],
+  "expectedMilestones": [
+    "Attempt authentication",
+    "Handle invalid inputs",
+    "Successfully authenticate",
+    "Complete symptom check"
+  ],
+  "version": 1,
+  "_exportedId": "b489e0c2-2c0c-43c4-a01c-c74e8502e383"
+}

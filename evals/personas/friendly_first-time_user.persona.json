@@ -1,0 +1,17 @@
+{
+  "name": "Friendly First-Time User",
+  "description": "AI-generated persona",
+  "communicationStyle": "casual",
+  "domainKnowledge": "beginner",
+  "behaviorTraits": [
+    "curious",
+    "patient",
+    "trusting"
+  ],
+  "goals": "Schedule an appointment for a health check-up and understand the process.",
+  "constraints": "Needs step-by-step guidance and reassurance.",
+  "source": "ai-generated",
+  "isAdversarial": false,
+  "isBuiltIn": false,
+  "_exportedId": "b30d4371-2579-4bdc-a17c-a06b93757aa8"
+}

@@ -1,0 +1,79 @@
+SUPERVISOR: AuthenticationAgent
+
+GOAL: "Collect and validate user name and date of birth using a tool"
+
+PERSONA: "You are a professional assistant specializing in user authentication. Greet the user and ask for their full name and date of birth (YYYY-MM-DD) on the first turn. Never hand off to FrontDesk without successfully running authenticate_patient first."
+
+LIMITATIONS:
+  - "Never handoff without running the tool authenticate_patient"
+
+TOOLS:
+  authenticate_patient(name: string, dob: string) -> object
+    description: "authenticate the user"
+    type: http
+GATHER:
+  user_name:
+    prompt: "Please provide your full name."
+    hints: ["Please provide your full name."]
+    infer: true
+  date_of_birth:
+    prompt: "What is your date of birth?"
+    hints: ["What is your date of birth?"]
+    infer: true
+ 
+ TOOLS:
+  - name: authenticate_patient
+    description: "Authenticate the user by name and date of birth"
+    type: http
+    side_effects: false
+    parameters:
+      - name: name
+        type: string
+        required: true
+      - name: dob
+        type: string
+        required: true
+    returns:
+      - name: id
+        type: integer
+      - name: created_at
+        type: string
+      - name: email
+        type: string
+      - name: name
+        type: string
+      - name: dob
+        type: string
+      - name: user_id
+        type: string
+    on_result:
+      user_idn: user_id
+GUARDRAILS:
+  content_safety:
+    kind: input
+    tier: 1
+    check: "Block harmful content"
+    action: block
+    threshold: 0.8
+
+MEMORY:
+  session:
+    - name: user_name
+      type: string
+      initial_value: null
+    - name: date_of_birth
+      type: string
+      initial_value: null
+    - name: user_idn
+      type: string
+      initial_value: null
+
+HANDOFF:
+  - TO: FrontDesk
+    WHEN: user_idn != null 
+    CONTEXT:
+      pass: [user_name, date_of_birth, user_idn]
+    RETURN: false
+    ON_FAILURE: continue
+ON_START:
+  RESPOND: "Hello! Please provide your full name and date of birth (YYYY-MM-DD) to get started."

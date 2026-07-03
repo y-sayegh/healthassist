@@ -1,0 +1,25 @@
+{
+  "name": "Booking Appointment",
+  "description": "User successfully books an appointment through the booking process.",
+  "category": "happy_path",
+  "difficulty": "easy",
+  "entryAgent": "BookingAgent",
+  "initialMessage": "I'd like to book an appointment for next Thursday at 3 PM.",
+  "expectedOutcome": "User receives a confirmation for the appointment scheduled on the requested date and time.",
+  "maxTurns": 5,
+  "tags": [
+    "booking",
+    "appointment"
+  ],
+  "agentPath": [
+    "BookingAgent"
+  ],
+  "expectedMilestones": [
+    "Request received",
+    "Check availability",
+    "User confirms time",
+    "Appointment booked"
+  ],
+  "version": 1,
+  "_exportedId": "f76a25da-3cd1-44e1-b95f-f089586f2f67"
+}

@@ -1,0 +1,73 @@
+{
+  "operationTierOverrides": {},
+  "orchestrationContract": {
+    "mode": "v2",
+    "origin": "new_empty"
+  },
+  "extraction": {
+    "strategy": "auto",
+    "correction_detection": "ml",
+    "sidecar_timeout_ms": 500,
+    "sidecar_circuit_breaker_threshold": 5,
+    "nlu_provider": "standard",
+    "pipeline_v2_enabled": true,
+    "mode": "auto",
+    "koreml_timeout_ms": 3000,
+    "koreml_circuit_breaker_threshold": 5,
+    "confidence_threshold": 0.5,
+    "include_confidence": true
+  },
+  "multi_intent": {
+    "enabled": true,
+    "strategy": "primary_queue",
+    "unknown_relationship_strategy": "parallel",
+    "max_intents": 3,
+    "confidence_threshold": 0.6,
+    "queue_max_age_ms": 600000
+  },
+  "inference": {
+    "confidence": 0.8,
+    "confirm": true,
+    "model_tier": "fast",
+    "max_fields_per_pass": 3
+  },
+  "conversion": {
+    "currency_mode": "static"
+  },
+  "pii_redaction": {
+    "enabled": true,
+    "redact_input": true,
+    "redact_output": false,
+    "tier": "basic",
+    "latency_budget_ms": 200,
+    "confidence_threshold": 0.5,
+    "enabled_recognizer_packs": [
+      "core"
+    ]
+  },
+  "lookup_tables": [],
+  "tool_call_policy": {
+    "max_boundary_call_depth": 3,
+    "max_boundary_calls_per_turn": 8,
+    "boundary_call_enabled": true
+  },
+  "analytics": {
+    "dimensions": []
+  },
+  "filler": {
+    "enabled": true,
+    "chatEnabled": true,
+    "voiceEnabled": true,
+    "chatDelayMs": 1200,
+    "voiceDelayMs": 500,
+    "cooldownMs": 3000,
+    "maxPerTurn": 5,
+    "conversationHistoryCount": 0,
+    "previousFillerCount": 0,
+    "maxOutputTokens": 30,
+    "promptOverrideMaxOutputTokens": 200,
+    "piggybackEnabled": true,
+    "pipelineGenerationEnabled": true,
+    "modelSource": "system"
+  }
+}

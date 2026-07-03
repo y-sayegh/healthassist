@@ -1,0 +1,14 @@
+{
+  "name": "set 1",
+  "scenarioIds": [],
+  "personaIds": [],
+  "evaluatorIds": [],
+  "variants": 3,
+  "maxConcurrency": 5,
+  "ciEnabled": false,
+  "personaModel": null,
+  "personaModelConfig": {
+    "temperature": 0.7,
+    "maxTokens": 512
+  }
+}

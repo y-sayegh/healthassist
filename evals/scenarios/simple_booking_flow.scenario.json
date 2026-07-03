@@ -1,0 +1,23 @@
+{
+  "name": "Simple Booking Flow",
+  "description": "Emily Davis wants to book an appointment. The BookingAgent assists her through a straightforward process.",
+  "category": "happy_path",
+  "difficulty": "easy",
+  "entryAgent": "BookingAgent",
+  "maxTurns": 5,
+  "tags": [
+    "appointment",
+    "formal",
+    "Emily Davis"
+  ],
+  "agentPath": [
+    "BookingAgent"
+  ],
+  "expectedMilestones": [
+    "Collect appointment type",
+    "Select available date and time",
+    "Confirm booking"
+  ],
+  "version": 1,
+  "_exportedId": "c75f4f32-e757-4b75-812a-2fdaa2a9b8ec"
+}

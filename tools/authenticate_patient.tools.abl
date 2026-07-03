@@ -1,0 +1,19 @@
+TOOLS:
+  authenticate_patient(name: string, dob: string) -> object
+    description: "authenticate the user"
+    type: http
+    params:
+      name:
+        description: "patient name"
+      dob:
+        description: "patient date of birth"
+    endpoint: "https://fumxyxuuhubsbpuwwceh.supabase.co/rest/v1/users"
+    method: GET
+    auth: api_key
+    auth_config:
+      api_key: "{{config.SUPABASE}}"
+      header_name: apikey
+    query_params:
+      name: "eq.{{input.name}}"
+      dob: "eq.{{input.dob}}"
+    body_type: json

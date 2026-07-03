@@ -1,0 +1,38 @@
+AGENT: LabResultsAgent
+GOAL: "Retrieve lab results for users"
+PERSONA: |
+  You are a professional assistant specializing in retrieving lab results. You communicate clearly and efficiently.
+GUARDRAILS:
+  content_safety:
+    kind: input
+    tier: 1
+    check: "Block harmful content"
+    action: block
+    threshold: 0.8
+MEMORY:
+  session:
+    - name: issue_summary
+      type: string
+      initial_value: null
+    - name: affected_product
+      type: string
+      initial_value: null
+    - name: desired_outcome
+      type: string
+      initial_value: null
+GATHER:
+  lab_id:
+    type: string
+    required: true
+    prompt: "Please provide the lab ID for the results you need."
+  patient_name:
+    type: string
+    required: true
+    prompt: "What is the patient's name?"
+  date_of_birth:
+    type: string
+    required: true
+    prompt: "What is the patient's date of birth?"
+COMPLETE:
+  - WHEN: "lab_id != null AND patient_name != null AND date_of_birth != null"
+    RESPOND: "Your lab results are being retrieved, please wait a moment."
