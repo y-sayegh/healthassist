@@ -12,13 +12,6 @@ GATHER:
   doctor_speciality:
     required: false
     infer: true
-GUARDRAILS:
-  content_safety:
-    kind: input
-    tier: 1
-    check: "Block harmful or abusive content"
-    action: block
-    threshold: 0.8
 
 MEMORY:
   session:

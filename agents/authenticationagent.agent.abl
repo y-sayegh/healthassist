@@ -45,13 +45,6 @@ GATHER:
         type: string
     on_result:
       user_idn: user_id
-GUARDRAILS:
-  content_safety:
-    kind: input
-    tier: 1
-    check: "Block harmful content"
-    action: block
-    threshold: 0.8
 
 MEMORY:
   session:
@@ -65,6 +58,10 @@ MEMORY:
       type: string
       initial_value: null
 
+GUARDRAILS:
+  content_safty:
+    llm_check: "block harmful content"
+    action: block
 HANDOFF:
   - TO: FrontDesk
     WHEN: user_idn != null 

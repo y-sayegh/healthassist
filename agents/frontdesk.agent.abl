@@ -9,7 +9,7 @@ GUARDRAILS:
     kind: input
     priority: 100
     threshold: 0.8
-    check: Block negative content
+    llm_check: Block negative content
     action: block
 HANDOFF:
   - TO: SymptomsCheckAgent

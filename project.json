@@ -4,7 +4,7 @@
   "slug": "healthassist",
   "description": "Health Assist application (symptoms check, appointments)",
   "abl_version": "1.0",
-  "exported_at": "2026-07-17T09:05:17.929Z",
+  "exported_at": "2026-07-17T11:16:41.556Z",
   "exported_by": "019eb003-88c5-7c36-9096-be7579cccbfa",
   "entry_agent": "AuthenticationAgent",
   "dsl_format": "legacy",

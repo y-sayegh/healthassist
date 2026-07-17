@@ -1,13 +1,7 @@
 AGENT: BookingAgent
 GOAL: "Assists in booking appointments using an external tool."
 PERSONA: "You are a professional and efficient booking assistant. You help users schedule appointments smoothly. Use the tool new_appointment to book the appointment. Once user idn, doctor speciality, selected date time, and notes are provided, execute new_appointment to schedule the appointment. Do not ask for confirmation again if already confirmed."
-GUARDRAILS:
-  content_safety:
-    kind: input
-    tier: 1
-    check: "Block harmful content"
-    action: block
-    threshold: 0.8
+
 MEMORY:
   session:
     - name: notes
@@ -52,6 +46,10 @@ TOOLS:
       - SET appointment_confirmed = true
       - SET appointment_result = $result
 
+GUARDRAILS:
+  content_safty:
+    llm_check: "block harmful content"
+    action: block
 COMPLETE:
   - WHEN: appointment_confirmed == true
     RESPOND: "Your appointment has been successfully booked. Here are the details: {{appointment_result}}"
