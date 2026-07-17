@@ -1,19 +1,9 @@
 {
-  "operationTierOverrides": {},
-  "orchestrationContract": {
-    "mode": "v2",
-    "origin": "new_empty"
-  },
   "extraction": {
     "strategy": "auto",
     "correction_detection": "ml",
-    "sidecar_timeout_ms": 500,
-    "sidecar_circuit_breaker_threshold": 5,
-    "nlu_provider": "standard",
     "pipeline_v2_enabled": true,
     "mode": "auto",
-    "koreml_timeout_ms": 3000,
-    "koreml_circuit_breaker_threshold": 5,
     "confidence_threshold": 0.5,
     "include_confidence": true
   },
@@ -43,16 +33,14 @@
     "confidence_threshold": 0.5,
     "enabled_recognizer_packs": [
       "core"
-    ]
+    ],
+    "secret_scrub_exempt_fields": []
   },
   "lookup_tables": [],
   "tool_call_policy": {
     "max_boundary_call_depth": 3,
     "max_boundary_calls_per_turn": 8,
     "boundary_call_enabled": true
-  },
-  "analytics": {
-    "dimensions": []
   },
   "filler": {
     "enabled": true,
@@ -69,5 +57,26 @@
     "piggybackEnabled": true,
     "pipelineGenerationEnabled": true,
     "modelSource": "system"
+  },
+  "analytics": {
+    "dimensions": [],
+    "outputItems": []
+  },
+  "orchestrationContract": {
+    "mode": "v2",
+    "origin": "new_empty"
+  },
+  "voice": {
+    "sttVocabulary": []
+  },
+  "voiceNoInput": {
+    "enabled": false,
+    "mode": "static",
+    "timeoutMs": 5000,
+    "relaxedIntervalMs": 15000,
+    "maxRetries": 3,
+    "onExhausted": "hangup",
+    "order": "sequence",
+    "playStyle": "looped"
   }
 }

@@ -1,6 +1,6 @@
 {
   "lockfile_version": "2.0",
-  "generated_at": "2026-07-03T06:39:07.367Z",
+  "generated_at": "2026-07-17T09:05:17.929Z",
   "agents": {
     "BookingAgent": {
       "version": "1.0",
@@ -9,12 +9,12 @@
     },
     "AuthenticationAgent": {
       "version": "1.0",
-      "source_hash": "37b660d7f4efaeee",
+      "source_hash": "73f02cbd2fbc6ddd",
       "status": "active"
     },
     "LabResultsAgent": {
       "version": "1.0",
-      "source_hash": "2f138ac2f5c1ccc6",
+      "source_hash": "73861e9013863aca",
       "status": "active"
     },
     "FrontDesk": {
@@ -32,22 +32,25 @@
     "tools/authenticate_patient.tools.abl": {
       "source_hash": "6e0e3dc7559b52fa"
     },
-    "tools/search_kb_symptoms.tools.abl": {
-      "source_hash": "cfe8883040cb9823"
-    },
     "tools/new_appointment.tools.abl": {
       "source_hash": "fb69e847f4b01216"
+    },
+    "tools/search_kb_symptoms.tools.abl": {
+      "source_hash": "54cbb4a724665249"
     }
   },
   "configs": {
     "config/runtime-config.json": {
-      "source_hash": "194e7dc8a26bcb80"
+      "source_hash": "f3b2f2023e0da07d"
     },
-    "config/project-model-configs/gpt-4o.model-config.json": {
-      "source_hash": "0a15c3133917b26d"
+    "config/llm-config.json": {
+      "source_hash": "8c6966cb1b299a23"
     },
     "config/project-model-configs/claude_opus_4_6.model-config.json": {
       "source_hash": "d17c02c62a627eab"
+    },
+    "config/project-model-configs/gpt-4o.model-config.json": {
+      "source_hash": "0a15c3133917b26d"
     },
     "environment/config-vars.json": {
       "source_hash": "47700e5ce80423d3"
@@ -58,10 +61,10 @@
   "workflows": {},
   "evals": {
     "evals/set_1/eval-set.json": {
-      "source_hash": "856c6932e21ae137"
+      "source_hash": "dedf52ed423e3cca"
     },
     "evals/quick_eval_-_6_1_2026/eval-set.json": {
-      "source_hash": "57e6128accb7fbb9"
+      "source_hash": "20ab1854521dae96"
     },
     "evals/scenarios/booking_appointment.scenario.json": {
       "source_hash": "1cbb2431842ce1a7"
@@ -124,15 +127,16 @@
   "vocabulary": {},
   "behavior_profiles": {},
   "layer_hashes": {
-    "core": "8dfd253d3ff39b33a3f381e169109192afbc51114e6ca308f01de49d34a0c9d9",
+    "core": "61db927104b5ea1fff9510d5467dd4581f85b5007ae413042acc2fb84a49df94",
     "connections": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "prompts": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "guardrails": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "workflows": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "evals": "d105de8250199edd4a97ac242dfb74c20003155e26e740eea4919c43d5658f32",
+    "evals": "1593793b6e77ef43808d6ef23a6cde7ed78f75afcea65d5e8bc148fc38eed952",
     "search": "8586463ef06532c5974f518769159ad1e6ba6bdf2fb019c344694d5634e7ca3d",
     "channels": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "vocabulary": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    "vocabulary": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tables": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
-  "integrity": "8ae1b418f2433894618ed481bdbb5a07270874118aa4cf8cc281027181fa2e4a"
+  "integrity": "dcdabead4de9c524f714f5bcca801b7e9379193823a0a3f5183999f71e9ded3a"
 }

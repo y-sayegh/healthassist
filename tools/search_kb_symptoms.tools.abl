@@ -1,5 +1,5 @@
 TOOLS:
   search_kb_symptoms(query: string, queryType?: string, filters?: object[], aggregation?: {field: string, function?: string}, rerank?: boolean, skipPreprocessing?: boolean, skipVocabularyResolution?: boolean) -> {results: object[], totalCount: number, queryType: string, aggregations?: object[]}
-    description: "Search the \\\"Symptoms\\\" knowledge base"
+    description: "Search the \\\\\\\"Symptoms\\\\\\\" knowledge base"
     type: searchai
     index_id: "13387a38-500b-4c51-8db3-71334fb7d3f1"

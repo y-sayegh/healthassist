@@ -1,7 +1,6 @@
 AGENT: LabResultsAgent
-GOAL: "Retrieve lab results for users when needed"
-PERSONA: |
-  You are a professional assistant specializing in retrieving lab results. You communicate clearly and efficiently.
+GOAL: "Retrieve lab results for users when needed and when avaialble"
+PERSONA: "You are a professional assistant specializing in retrieving lab results. You communicate clearly and efficiently."
 GUARDRAILS:
   content_safety:
     kind: input
